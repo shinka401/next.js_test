@@ -29,9 +29,16 @@ export default function Home() {
     setText(e.target.value);
   }, []);
 
-  const handleDisplay = useCallback(() => {
-    setIsShow((isShow) => !isShow);
-  }, []);
+  const handleAdd = useCallback(() => {
+    setArray((prevArray) => {
+      if (prevArray.some((item) => item === text)) {
+        console.log("hit")
+        alert("同じ要素が既にあります");
+        return prevArray;
+      }
+      return [...prevArray, text];
+    });
+  }, [text]);
 
   useEffect(() => {
     console.log(`マウント時: ${count}`);
@@ -51,12 +58,14 @@ export default function Home() {
       <Header />
       {isShow ? <h1>{count}</h1> : null}
       <button onClick={handleClick}>ボタン</button>
-      <button
-        onClick={handleDisplay}
-      >
-        {isShow ? "非表示" : "表示"}
-      </button>
+      <button onClick={handleDisplay}>{isShow ? "非表示" : "表示"}</button>
+      <button onClick={handleAdd}>追加</button>
       <input type="text" value={text} onChange={handleChange}></input>
+      <ul>
+        {array.map((item) => {
+          return <li key={item}>{item}</li>;
+        })}
+      </ul>
       <Main page="index" />
       <Footer />
     </div>
