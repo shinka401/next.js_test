@@ -6,7 +6,7 @@ export function Main(props) {
   return (
       <main className={styles.main}>
         <Headline
-        page="about"
+        page={props.page}
         >
         <code className={styles.code}>pages/{props.page}.js</code>
         </Headline>
