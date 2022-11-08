@@ -3,9 +3,6 @@ import styles from "src/styles/Home.module.css";
 import { Footer } from "src/components/Footer";
 import { Main } from "src/components/Main";
 import { Header } from "src/components/Header";
-import { useBgLightBlue } from "src/hooks/useBgLightBlue";
-import { useCounter } from "src/hooks/useCounter";
-import { useInputArray } from "src/hooks/useInputArray";
 
 export default function Home(props) {
   return (
@@ -16,7 +13,7 @@ export default function Home(props) {
     </Head>
     <Header />
 
-    {props.isShow ? <h1>{props.count}</h1> : null}
+    {props.isShow ? <h1>{props.doubleCount}</h1> : null}
     <button onClick={props.handleClick}>ボタン</button>
     <button onClick={props.handleDisplay}>
       {props.isShow ? "非表示" : "表示"}
