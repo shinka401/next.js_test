@@ -7,11 +7,10 @@ import { useCounter } from "src/hooks/useCounter";
 import { useInputArray } from "src/hooks/useInputArray";
 import styles from "src/styles/Home.module.css";
 
-export default function Home() {
-  const { count, isShow, handleClick, handleDisplay } = useCounter();
+export default function Home(props) {
+  const { count, isShow, handleClick, handleDisplay, } = useCounter();
   const { text, array, handleChange, handleAdd } = useInputArray();
   useBgLightBlue();
-
   return (
     <div className={styles.container}>
       <Head>
@@ -22,9 +21,15 @@ export default function Home() {
 
       {isShow ? <h1>{count}</h1> : null}
       <button onClick={handleClick}>ボタン</button>
-      <button onClick={handleDisplay}>{isShow ? "非表示" : "表示"}</button>
+      <button onClick={handleDisplay}>
+        {isShow ? "非表示" : "表示"}
+      </button>
 
-      <input type="text" value={text} onChange={handleChange}></input>
+      <input
+        type="text"
+        value={text}
+        onChange={handleChange}
+      ></input>
       <button onClick={handleAdd}>追加</button>
       <ul>
         {array.map((item) => {

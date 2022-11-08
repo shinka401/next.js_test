@@ -7,10 +7,9 @@ import { useBgLightBlue } from "src/hooks/useBgLightBlue";
 import { useCounter } from "src/hooks/useCounter";
 import { useInputArray } from "src/hooks/useInputArray";
 
-export default function Home() {
+export default function Home(props) {
   const { count, isShow, handleClick, handleDisplay } = useCounter();
   const { text, array, handleChange, handleAdd } = useInputArray();
-  useBgLightBlue();
   return (
     <div className={styles.container}>
       <Head>
