@@ -1,6 +1,6 @@
 import styles from "src/components/Headline/Headline.module.css";
 
-export function Headline(props) {
+export const Headline = (props) => {
   return (
     <div>
       <h1 className={styles.title}>
@@ -10,4 +10,4 @@ export function Headline(props) {
       <p className={styles.description}>アイテムの数は {props.children}</p>
     </div>
   );
-}
+};

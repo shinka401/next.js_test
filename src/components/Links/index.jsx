@@ -1,6 +1,6 @@
 import styles from "src/components/Links/Links.module.css";
 
-export function Links(props) {
+export const Links = (props) => {
   return (
     <div className={styles.grid}>
       <button onClick={props.handleReduce}>減らす</button>
@@ -14,4 +14,4 @@ export function Links(props) {
       })}
     </div>
   );
-}
+};
