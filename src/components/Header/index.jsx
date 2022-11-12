@@ -11,7 +11,7 @@ export const Header = () => {
     <header className={styles.header}>
       {NAV_ITEMS.map((item) => {
         return (
-          <Link key={item.label} href={item.href} className={styles.anchor}>
+          <Link key={item.label} href={item.href}>
             {item.label}
           </Link>
         );
