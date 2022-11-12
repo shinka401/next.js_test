@@ -25,7 +25,7 @@ const Home = (props) => {
       {posts.length > 0 ? (
         <ol>
           {posts.map((item) => {
-            return <li ket={item.id}>{item.title}</li>;
+            return <li key={item.id}>{item.title}</li>;
           })}
         </ol>
       ) : null}
