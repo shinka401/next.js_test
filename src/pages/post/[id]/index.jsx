@@ -1,5 +1,5 @@
 import { Header } from "src/components/Header";
-import Post from "src/components/Post";
+import { Post } from "src/components/Post";
 import styles from "src/styles/Home.module.css";
 
 const PostId = () => {
