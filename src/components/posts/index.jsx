@@ -25,5 +25,3 @@ export const Posts = () => {
     </ol>
   );
 };
-
-export default Posts;
