@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { usePosts } from "src/hooks/usePosts";
 
-export const Posts = () => {
+export const PostList = () => {
   const { data, error, isLoading, isEmpty } = usePosts();
   if (isLoading) {
     return <div>{"ローディング中"}</div>;
