@@ -5,6 +5,7 @@
   justify-content: center;
   align-items: center;
   border-bottom: 1px solid #eaeaea;
+  margin: 0 auto;
 }
 .header a {
   display: inline-block;
